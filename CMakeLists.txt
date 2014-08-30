@@ -97,15 +97,11 @@ add_library(whatsapp ${LINK_MODE_MODULE}
 set_target_properties(whatsapp PROPERTIES PREFIX "")
 set_target_properties(whatsapp PROPERTIES LINK_FLAGS "${WS_LINK_FLAGS}")
 
-<<<<<<< HEAD
 IF(DEFINED MANUAL_LINK)
 target_link_libraries(whatsapp)
 ELSE()
 target_link_libraries(whatsapp crypto)
 ENDIF()
-=======
-target_link_libraries(whatsapp wireshark)
->>>>>>> parent of 84f8794... Removed libwireshark from dependency list. Seems to build ok in x64
 
 install(TARGETS whatsapp
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/plugins NAMELINK_SKIP
